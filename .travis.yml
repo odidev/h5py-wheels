@@ -56,7 +56,6 @@ matrix:
         - NP_TEST_DEP="1.14.5"
 
     - os: linux
-      arch: arm64
       env:
         - MB_PYTHON_VERSION=3.6
         - NP_BUILD_DEP="1.19.2"
@@ -64,8 +63,10 @@ matrix:
         - MB_ML_VER=2014
         - PLAT=aarch64
         - DOCKER_TEST_IMAGE=multibuild/xenial_arm64v8
+      arch: arm64-graviton2
+      virt: lxd
+      group: edge
     - os: linux
-      arch: arm64
       env:
         - MB_PYTHON_VERSION=3.7
         - NP_BUILD_DEP="1.19.2"
@@ -73,8 +74,10 @@ matrix:
         - MB_ML_VER=2014
         - PLAT=aarch64
         - DOCKER_TEST_IMAGE=multibuild/xenial_arm64v8
+      arch: arm64-graviton2
+      virt: lxd
+      group: edge
     - os: linux
-      arch: arm64
       env:
         - MB_PYTHON_VERSION=3.8
         - NP_BUILD_DEP="1.19.2"
@@ -82,6 +85,9 @@ matrix:
         - MB_ML_VER=2014
         - PLAT=aarch64
         - DOCKER_TEST_IMAGE=multibuild/xenial_arm64v8
+      arch: arm64-graviton2
+      virt: lxd
+      group: edge
 
     - os: osx
       language: generic
